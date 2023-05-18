@@ -1,0 +1,11 @@
+<!--pages/data/data.wxml-->
+<view class='view-page'>
+  <navbar page-name="PANNEL"></navbar>
+</view>
+<view class="data_container">
+  <ec-canvas id="mychart-dom-gauge" canvas-id="mychart-gauge" ec="{{ ec }}"></ec-canvas>
+</view>
+<view style="position: absolute; top: 600px;">
+  <button style="display:inline-block;" bindtap="opentable">表格</button>
+  <button style="display:inline-block;" bindtap="openline">折线图</button>
+</view>

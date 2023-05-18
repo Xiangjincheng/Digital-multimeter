@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class='view-page'>
+  <navbar page-name="LINE"></navbar>
+</view>
+<view>
+  <text class="tittle">电压(V)</text>
+</view>
+<view class="pic_container" style="width: 375px; height: 300px; ">
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+</view>
+<view style="position: absolute; top: 600px;">
+  <button style="display:inline-block;" bindtap="opentable">表格</button>
+  <button style="display:inline-block;" bindtap="opendata">仪表盘</button>
+</view>

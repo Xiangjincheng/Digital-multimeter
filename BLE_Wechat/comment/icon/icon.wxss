@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'ss-font';  /* Project id 3158768 */
+  src: url('//at.alicdn.com/t/font_3158768_ydtmh9ydokf.woff2?t=1643014366638') format('woff2'),
+       url('//at.alicdn.com/t/font_3158768_ydtmh9ydokf.woff?t=1643014366638') format('woff'),
+       url('//at.alicdn.com/t/font_3158768_ydtmh9ydokf.ttf?t=1643014366638') format('truetype');
+}
+
+.ss-font {
+  font-family: "ss-font" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ss-iconsaomiao:before {
+  content: "\e620";
+}
+
+.ss-iconjieshu1:before {
+  content: "\e71d";
+}
+
+.ss-iconjieshu2:before {
+  content: "\e676";
+}
+
+.ss-iconguanbi2fill:before {
+  content: "\e724";
+}
+
+.ss-icondetect:before {
+  content: "\e6fa";
+}
+
+.ss-iconjieshu:before {
+  content: "\e61a";
+}
+
+.ss-iconlanya:before {
+  content: "\e6ac";
+}
+
+.ss-icontuichu:before {
+  content: "\e666";
+}
+
+.ss-iconzhuye:before {
+  content: "\e66e";
+}
+
+.ss-iconhoutuiyuan:before {
+  content: "\e670";
+}
+
+.ss-icontuichu:before {
+  content: "\e666";
+}
+
+.ss-iconzhuye:before {
+  content: "\e66e";
+}
+
+.ss-iconhoutuiyuan:before {
+  content: "\e670";
+}
+
+
+  

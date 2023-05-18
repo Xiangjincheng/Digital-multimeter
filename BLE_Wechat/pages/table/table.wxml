@@ -1,0 +1,21 @@
+<view class='view-page'>
+  <navbar page-name="TABLE"></navbar>
+</view>
+<!--TABLE-->
+<view style="margin-top: 10%; " >
+  <s-table config="{{tableConfig}}" rows="{{rows}}" keys="{{keys}}" headers="{{headers}}"></s-table>
+  <view style="font-size: 30px; margin-top: 5%;">平均值</view>
+  <view>
+    <view class="font-text">电压:{{vol_ave}}V</view>
+    <view class="font-text">电阻:{{reg_ave}}KΩ</view>
+    <view class="font-text">电流:{{cur_ave}}A</view>
+  </view>
+</view>
+<!--DATA-->
+<!--PICT-->
+<view style="position: absolute; top: 600px;">
+  <button style="display:inline-block;" bindtap="openline">折线图</button>
+  <button style="display:inline-block;" bindtap="opendata">仪表盘</button>
+</view>
+
+  

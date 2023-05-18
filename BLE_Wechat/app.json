@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/data/data",
+    "pages/line/line",
+    "pages/table/table",
+    "pages/index/index",
+    "pages/WiFi/WiFi",
+    "pages/logs/logs",
+    "pages/Bluetooth/Bluetooth"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#c3c7b1",
+    "navigationBarTitleText": "The Use Of BlueTooth",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

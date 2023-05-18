@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navbar": "/comment/navbar/navbar",
+    "ss-icon": "/comment/icon/icon"
+  }
+}

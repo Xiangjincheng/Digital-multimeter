@@ -1,0 +1,21 @@
+<view class='view-page'>
+    <navbar page-name="WiFi"></navbar>
+  </view>
+<view class="container" style="width: 750rpx; height: {{windowHeight}}px ; display: flex; box-sizing: border-box">
+  <view class="users">
+    <view class="itemView">SSID：  </view>
+      <input style="background: #fcfcfc4f" value="{{userName}}" class="input" name="userName" placeholder-style="color:#e7d59b" placeholder="Please Input SSID" 
+      bindinput="userNameInput"/>
+    <view class="itemView">Passward: </view>
+      <input style="background: #fcfcfc4f" value="{{passWd}}" class="input" password placeholder-style="color:#e7d59b" placeholder="Please Input Passward"
+      bindinput="passWdInput" />
+  </view>
+  <view class="connect">
+    <view wx:if="{{recievedata}}">WiFi Is Connected</view>
+    <view wx:if="{{recievedata}}">Your Device's IP Is: {{recievedata}}</view>
+  </view>
+  <view class="viewName"  >
+    <button class="loginBtn" hover-class="loginBtn-hover" style=" font-size: 0.5cm; height: 98rpx; position: relative; left: -180rpx; top: -415rpx; width: 322rpx; display: block; box-sizing: border-box" bindtap="writeBLECharacteristicValue">登录</button>
+    <button class="resetBtn" hover-class="resetBtn-hover" style="font-size: 0.5cm; height: 98rpx; position: relative; left: 191rpx; top: -512rpx; width: 322rpx; display: block; box-sizing: border-box" bindtap="resetBtnClick">清除</button>
+  </view>
+</view>

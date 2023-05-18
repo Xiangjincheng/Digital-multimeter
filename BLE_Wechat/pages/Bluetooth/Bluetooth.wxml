@@ -1,0 +1,45 @@
+<view class='view-page'>
+  <navbar page-name="Bluetooth"></navbar>
+</view>
+<view class="container"  style="width: 750rpx; height: {{windowHeight}}px ; box-sizing: border-box">
+  <view class="scan-button">
+    <ss-icon name="lanya" color="#c7a18c" size="30px" class="navbar-action_item" ></ss-icon>
+    <button class="button1" hover-class="button-hover" style="width:70vw;" bindtap="openBluetoothAdapter">Start Scaning
+      <view style="margin-left: 35px; margin-top: 6px;"> <ss-icon name="saomiao" color="black" size="20px" block="{{true}}" class="navbar-action_item" ></ss-icon> </view>
+    </button>
+    <button class="button2" hover-class="button-hover" style="width:70vw;" bindtap="stopBluetoothDevicesDiscovery">Stop Scaning
+      <view style="margin-left: 35px; margin-top: 6px;"> <ss-icon name="jieshu2" color="black" size="20px" block="{{true}}" class="navbar-action_item" ></ss-icon> </view>
+    </button>
+    <button class="button3" hover-class="button-hover" style="width:70vw;" bindtap="closeBluetoothAdapter">End Of Progress
+      <view style="margin-left: 8px; margin-top: 6px;"> <ss-icon name="jieshu1" color="black" size="23px" block="{{true}}" class="navbar-action_item" ></ss-icon> </view>
+    </button>
+    <view class="devices_summary" style="margin-top: 30px; margin-right: 110px; color: #e7d59b;">
+      {{devices.length}} peripherals have been found：
+    </view>
+  </view>
+  <scroll-view wx:if="{{devices.length}}" class="device_list" style="width: 100%;" scroll-y scroll-with-animation>
+    <view wx:for="{{devices}}" wx:key="index"
+      data-device-id="{{item.deviceId}}"
+      data-name="{{item.name || item.localName}}"
+      bindtap="createBLEConnection" 
+      class="device_item"
+      hover-class="device_item_hover">
+      <view style="font-size: 16px; color: #333;">{{item.name}}</view>
+      <view style="font-size: 10px">Signal strength: {{item.RSSI}}dBm ({{utils.max(0, item.RSSI + 100)}}%)</view>
+      <view style="font-size: 10px">UUID: {{item.deviceId}}</view>
+      <view style="font-size: 10px">The Number Of Service: {{utils.len(item.advertisServiceUUIDs)}}</view>
+    </view>
+  </scroll-view>
+  <view class="connected_info" wx:if="{{connected}}">
+      <text style="font-style: italic; font-size: 18px;">Is connected to: {{name}}</text>
+    <view class="nextbutton">
+      <button wx:if="{{canWrite}}" class="button4" hover-class="button-down" size="mini" style="margin: 10px;color: white;"  bindtap="jumpWiFi">Put SSID & Passward</button>
+      <button wx:if="{{canWrite}}" class="button5" hover-class="button-down" size="mini"  style="margin: 10px;color: white;"  bindtap="closeBLEConnection">Interruput</button>
+    </view>
+    <view wx:for="{{chs}}" wx:key="index" style="font-size: 12px; margin-top: 10px;">
+      <view>UUID: {{item.uuid}}</view>
+      <view>Value: {{item.value}}</view>
+    </view>
+  </view>
+</view>
+

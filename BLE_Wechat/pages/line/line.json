@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navbar": "/comment/navbar/navbar",
+    "ss-icon": "/comment/icon/icon",
+    "ec-canvas": "../../comment/ec-canvas/ec-canvas"
+  }
+}
